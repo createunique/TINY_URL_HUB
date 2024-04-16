@@ -11,25 +11,15 @@ The URL Shortener project offers a user-friendly solution for shortening long UR
 ## Working Mechanism
 The URL Shortener functions through a series of systematic steps:
 
-- **User Input:**
+- **User Input:** Users interact with the URL Shortener by entering a long URL into the provided input field on the web interface. This input field serves as the entry point for the URL shortening process.
 
-Users interact with the URL Shortener by entering a long URL into the provided input field on the web interface. This input field serves as the entry point for the URL shortening process.
+- **Validation:** Upon submission of the long URL, the input undergoes validation to ensure it conforms to a proper URL format. This validation step is crucial for maintaining the integrity and accuracy of the shortening process. Validation checks may include verifying the presence of essential components such as the protocol (e.g., HTTP, HTTPS), domain name, and path.
 
-- **Validation:**
+-**Shortening Process:** After successful validation, the URL Shortener proceeds to shorten the long URL by generating a unique shortened version. This process typically involves utilizing a hashing algorithm, such as SHA-256, to create a compact representation of the original URL. The SHA-256 hashing algorithm generates a fixed-length hash value based on the input data (i.e., the long URL), providing a distinct identifier for the URL while maintaining data integrity and security.
 
-Upon submission of the long URL, the input undergoes validation to ensure it conforms to a proper URL format. This validation step is crucial for maintaining the integrity and accuracy of the shortening process. Validation checks may include verifying the presence of essential components such as the protocol (e.g., HTTP, HTTPS), domain name, and path.
+-**Database Storage:** Once the shortened URL is generated, both the original long URL and its corresponding shortened version are securely stored in a MySQL database. This database serves as a centralized repository for managing URL data efficiently. Storing URLs in a database enables seamless retrieval and management of URL records, facilitating future access and manipulation as needed. Database storage ensures that the URL Shortener can handle large volumes of URLs while maintaining performance and scalability.
 
--**Shortening Process:**
-
-After successful validation, the URL Shortener proceeds to shorten the long URL by generating a unique shortened version. This process typically involves utilizing a hashing algorithm, such as SHA-256, to create a compact representation of the original URL. The SHA-256 hashing algorithm generates a fixed-length hash value based on the input data (i.e., the long URL), providing a distinct identifier for the URL while maintaining data integrity and security.
-
--**Database Storage:**
-
-Once the shortened URL is generated, both the original long URL and its corresponding shortened version are securely stored in a MySQL database. This database serves as a centralized repository for managing URL data efficiently. Storing URLs in a database enables seamless retrieval and management of URL records, facilitating future access and manipulation as needed. Database storage ensures that the URL Shortener can handle large volumes of URLs while maintaining performance and scalability.
-
--**Return Shortened URL:**
-
-Upon successful completion of the shortening process and database storage, the shortened URL is promptly returned to the user. This shortened URL serves as a concise and shareable representation of the original long URL. Users can then copy the shortened URL from the web interface and utilize it for various purposes, such as sharing links on social media, embedding in emails, or posting on websites. The prompt return of the shortened URL enhances user experience by providing instant access to the shortened link, facilitating seamless sharing and dissemination across different platforms.
+-**Return Shortened URL:** Upon successful completion of the shortening process and database storage, the shortened URL is promptly returned to the user. This shortened URL serves as a concise and shareable representation of the original long URL. Users can then copy the shortened URL from the web interface and utilize it for various purposes, such as sharing links on social media, embedding in emails, or posting on websites. The prompt return of the shortened URL enhances user experience by providing instant access to the shortened link, facilitating seamless sharing and dissemination across different platforms.
 
 ## Files & Components
 - `index.html`: This HTML file serves as the primary interface for users to input long URLs and view shortened versions.
