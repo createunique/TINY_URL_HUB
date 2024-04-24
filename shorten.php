@@ -1,9 +1,9 @@
 <?php
 // Database connection
-$host = "sql200.infinityfree.com";
-$username = "if0_36329016";
-$password = "W61DxPiDLMGDqN3";
-$database = "if0_36329016_url_short_t";
+$host = "HOSTNAME";
+$username = "DBUSERNAME";
+$password = "DBPPASSWORD";
+$database = "DBNAME";
 
 // Validate and sanitize the input
 if (!isset($_POST['long_url']) || empty($_POST['long_url'])) {
